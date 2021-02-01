@@ -10,8 +10,19 @@
 
 #include <stdint.h>
 
+/*! \typedef
+ *  \brief Type of timer counter
+ *
+ * Look out capacity of counter. In this case it is 256 ticks. Overflowing is not
+ * checked.
+ */
 typedef uint8_t Counter;
 
+/*! \def
+ *  \brief Interrupt guard
+ *
+ *  In case of uint8_t there is no need to guard critical sections.
+ */
 #define CRITICAL_SECTION_BEGIN
 #define CRITICAL_SECTION_END
 
