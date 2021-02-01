@@ -1,10 +1,12 @@
-To use:
-1. define include path to appriopriate port file "software_timer_port.h"
-2. define global variable of Timer type. There's no need to define it volatile.
-3. export variable to every file timer is in use.
-4. include software_timer.h file in every file timer is in use. 
+## To use:
+* define include path to appriopriate port file "software_timer_port.h"
+* define global variable of Timer type. There's no need to define it volatile.
+* export variable to every file timer is in use.
+* include software_timer.h file in every file timer is in use. 
 
-Usage example
+## Usage example
+
+```
 
 /* main.c */
 #include <avr/io.h>
@@ -63,3 +65,4 @@ ISR(TIMER0_OVF_vect)
 	Timer_count(&buttonPeriod);
 	Timer_count(&busyWait);
 }
+```
